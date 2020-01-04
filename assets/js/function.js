@@ -242,7 +242,13 @@ function openwechat() {
   selected = "yes";
   document.getElementById("titleinfo").innerHTML = wechatscan + payto;
   client = wechat;
-  showqrcode();
+  if (location.href.substr(location.href.lastIndexOf('#') + 1) == "showqrcode" && selected == "yes") document.getElementById('showqrcode').style.display = "flex";
+  if (document.getElementById("currentqrcode").innerHTML.includes("img")) {
+    document.getElementById('currentqrcode').getElementsByTagName("img")[0].setAttribute("id", "todel");
+    document.getElementById("currentqrcode").removeChild(document.getElementById("todel"));
+    // console.log("removed");
+  }
+  $("#currentqrcode").html('<img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/appreciates.jpg" height="300"/>');
 }
 function openalipay() {
   selected = "yes";
