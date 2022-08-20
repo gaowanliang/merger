@@ -248,7 +248,7 @@ function openwechat() {
     document.getElementById("currentqrcode").removeChild(document.getElementById("todel"));
     // console.log("removed");
   }
-  $("#currentqrcode").html('<img src="https://cdn.jsdelivr.net/gh/gaowanliang/p/img/appreciates.jpg" height="300"/>');
+  $("#currentqrcode").html('<img src="https://gcore.jsdelivr.net/gh/gaowanliang/p/img/appreciates.jpg" height="300"/>');
 }
 function openalipay() {
   selected = "yes";
